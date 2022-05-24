@@ -1,13 +1,15 @@
-function setup(){
-    createCanvas(400,300);
+/*Creating a program which outputs  circles inside circles total 40 circles*/
 
+/*Creating canvas*/
+function setup(){
+    createCanvas(400,400);
 }
 function draw(){
-    background(100);
-    noFill()
-    // For loop syntax
-     for(var i=0;i < 25;i ++){
-        circle(200,150,i*30);
+    /*Setting background and color to nofill*/
+    background(211, 211, 211);
+    noFill();
+    /* For loop for circles*/
+    for(var i=40;i > 0;i --){
+        circle(200,200,i*5);
    }
-console.log("vjvjhv" +i)
 } 

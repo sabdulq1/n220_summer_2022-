@@ -1,28 +1,21 @@
-
-let n=4
+/*Creating a program which outputs loop of circles using array */
+/*using array of objects method to list the below*/
+let info=[
+  {number_of_circles:5,radias :30, x_axis:200,y_axis:150,}
+  ]
 function setup() {
-  //creating a 200x200 canvas
-  createCanvas(200,200);
-  //using red fill color
-  
-  //and white stroke color
- 
+  /*creating canvas*/
+  createCanvas(400,300);
 }
 
 
 function draw() {
-  //clearing background with white
-  background(255);
-  fill(255,0,0);
-   stroke(255);
-   
-  //looping from i=0 to i=3
-  for(var i=0;i<n;i++){
-
-    //looping from j=0 to j=i
-    for(var j=0;j<=i;j++){
-      //drawing a rectangle at x=cell_size*j, y=cell_size*i, with width=cell_size and height=cell_size
-      rect(30*j, 30*i,60,60);
-    }
+  /*setting background*/
+  background(100);
+  noFill()  
+  /*looping for circle*/
+  for(var i=0;i < info[0].number_of_circles;i ++){
+    circle(info[0].x_axis,info[0].y_axis,i*info[0].radias);
   }
 }
+
