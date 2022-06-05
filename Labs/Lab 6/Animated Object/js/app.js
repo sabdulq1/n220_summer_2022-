@@ -1,37 +1,64 @@
-let newEL=document.createElement("button");
-newEL.style.height="60px";
-newEL.style.width="120px";
-newEL.style.font="50px";
-newEL.innerHTML="Personal Composition";
-newEL.style.color="red";
-newEL.style.backgroundColor="hsla(0,0%,0%,0)";
-newEL.style.opacity="1";
-newEL.style.border="2px solid white";
-newEL.style.borderColor="white";
-newEL.style.borderRadius="10px"
-newEL.style.margin="auto ";
-newEL.style.cursor="pointer";
-newEL.style.position="relative"
-/*Failed attempt*/
-//newEL.style.filter="dropShadow(0,5,10 ,0 rgba(0,0,0,0.5))";
-// newEL.style.boxShadow="0px,5px,10px ,0px";
-// newEL.style.boxShadow="rgba(0,0,0,0.5)";
-  
-newEL.onmouseover=function(){
-  this.style.backgroundColor="white";
-  newEL.style.color="black";
-  newEL.style.transition="1s ease";
-  newEL.innerHTML="I did it!";
-}
-newEL.onmouseout=function(){
-  this.style.backgroundColor="hsla(0,0%,0%,0)";
-  newEL.style.color="red";
-  newEL.innerHTML="Personal Composition";
-  newEL.style.font="50px";
-  let height = newEL.offsetHeight + (0.01 * newEL.offsetHeight)+"px";
-  let width = newEL.offsetWidth + (0.01 * newEL.offsetWidth)+"px";
-  newEL.style.height = height;
-  newEL.style.width = width;
-}
-document.body.appendChild(newEL);
+// arr = []
 
+
+
+// function setup() {
+//   createCanvas(400, 400);
+
+//   for (let i = 0; i < int(random(15, 20)); ++i) {
+//     obj = {x:random(width), y: random(height), size: random(10, 20)};
+    
+//     arr.push(obj);
+//   }
+// }
+
+// function draw() {
+//   background(220);
+  
+//   arr.forEach(e => {
+//     e.x += 1;
+//     if (e.x > width) {
+//       e.x = 0;
+//     }
+//     circle(e.x, e.y, e.size);
+//   });
+// }
+
+class Particles{
+  x= Math.random()*600;
+  y= Math.random()*400;
+  z=30;
+  velocityx=1;
+  velocityy=0;
+  
+
+  update(){
+      fill("red");
+      circle(this.x,this.y,this.z,)
+
+      this.x +=this.velocityx;
+      //this.y +=this.velocityy;
+  }
+
+}
+
+let particles=[];
+
+function setup(){
+  createCanvas(600,400)
+  background("black");
+  //noFill()  
+  
+
+  for(var i= 0; i<30;i++){
+      if (particles[i]= new Particles());
+      Particles[i] +1;
+  }
+
+}
+function draw(){
+  for(var i= 0; i< particles.length;i++){
+      particles[i].update();
+      
+  }
+}
