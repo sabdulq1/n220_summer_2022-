@@ -16,6 +16,12 @@ let pSpeed=3;
 
 let aWidth=40;
 let aHeight=40;
+let row =1;
+let currentRow= row;
+let rowDistance=2;
+let aDistance=0;
+let aSpeed =3;
+let aDirection=1;
 //row 1
 let a1X =50;
 let a1Y =150;
@@ -133,6 +139,9 @@ function draw(){
   if(stage==2){
     win();
   }
+  if(stage==3){
+    lose();
+  }
 
   if(mouseIsPressed===true){
     stage=1;
@@ -175,9 +184,24 @@ function win(){
   text('You Won',width/2,250);
   textSize(40);
   text('Refresh to Play again ',width/2,350);
+}
+function lose(){
+  background("red");
 
-  
+  // making border green 
+  stroke(0,255,0);
+  noFill();
+  strokeWeight(20);
+  rect(width/2,height/2,width,height)
 
+  fill("green");
+  textSize(90);
+  textFont('Brush Script MT ');
+  text('OPPS!',width/2,100);
+  textFont('Fantasy');
+  text('You Lose',width/2,250);
+  textSize(40);
+  text('Refresh to Try again ',width/2,350);
 }
 
 
@@ -300,7 +324,81 @@ function alien(){
       rect(a25X,a25Y,aWidth,aHeight)
       rect(a26X,a26Y,aWidth,aHeight)
       rect(a27X,a27Y,aWidth,aHeight)
+
+
+      //moving aliens left right and down
+      a1X=a1X+(aSpeed*aDirection)
+      a1Y=a1Y+aDistance;
+      a2X=a2X+(aSpeed*aDirection)
+      a2Y=a2Y+aDistance;
+      a3X=a3X+(aSpeed*aDirection)
+      a3Y=a3Y+aDistance;
+      a4X=a4X+(aSpeed*aDirection)
+      a4Y=a4Y+aDistance;
+      a5X=a5X+(aSpeed*aDirection)
+      a5Y=a5Y+aDistance;
+      a6X=a6X+(aSpeed*aDirection)
+      a6Y=a6Y+aDistance;
+      a7X=a7X+(aSpeed*aDirection)
+      a7Y=a7Y+aDistance;
+      a8X=a8X+(aSpeed*aDirection)
+      a8Y=a8Y+aDistance;
+      a9X=a9X+(aSpeed*aDirection)
+      a9Y=a9Y+aDistance;
+      a10X=a10X+(aSpeed*aDirection)
+      a10Y=a10Y+aDistance;
+      a11X=a11X+(aSpeed*aDirection)
+      a11Y=a11Y+aDistance;
+      a12X=a12X+(aSpeed*aDirection)
+      a12Y=a12Y+aDistance;
+      a13X=a13X+(aSpeed*aDirection)
+      a13Y=a13Y+aDistance;
+      a14X=a14X+(aSpeed*aDirection)
+      a14Y=a14Y+aDistance;
+      a15X=a15X+(aSpeed*aDirection)
+      a15Y=a15Y+aDistance;
+      a16X=a16X+(aSpeed*aDirection)
+      a16Y=a16Y+aDistance;
+      a17X=a17X+(aSpeed*aDirection)
+      a17Y=a17Y+aDistance;
+      a18X=a18X+(aSpeed*aDirection)
+      a18Y=a18Y+aDistance;
+      a19X=a19X+(aSpeed*aDirection)
+      a19Y=a19Y+aDistance;
+      a20X=a20X+(aSpeed*aDirection)
+      a20Y=a20Y+aDistance;
+      a21X=a21X+(aSpeed*aDirection)
+      a21Y=a21Y+aDistance;
+      a22X=a22X+(aSpeed*aDirection)
+      a22Y=a22Y+aDistance;
+      a23X=a23X+(aSpeed*aDirection)
+      a23Y=a23Y+aDistance;
+      a24X=a24X+(aSpeed*aDirection)
+      a24Y=a24Y+aDistance;
+      a25X=a25X+(aSpeed*aDirection)
+      a25Y=a25Y+aDistance;
+      a26X=a26X+(aSpeed*aDirection)
+      a26Y=a26Y+aDistance;
+      a27X=a27X+(aSpeed*aDirection)
+      a27Y=a27Y+aDistance;
     
+      if(a9X>=width-40){
+        aDirection=aDirection*-1;
+        row=row+1
+      }
+      if(a1X<=40){
+        aDirection=aDirection*-1;
+        row=row+1
+      }
+
+      if(row>currentRow){
+        aDistance=rowDistance;
+        currentRow=row;
+      }
+      else{
+        aDistance=0;
+      }
+
       
     //colision whth aliens and bullets
     if(bX >= a1X-aWidth/2 && bX <=a1X+aWidth/2 && bY >= a1Y-aHeight/2 && bY <=a1Y+aHeight/2){
@@ -491,6 +589,13 @@ function alien(){
       a27X=-1000;
       bpostion=2;
     }
+
+
+    //game over when aliens touch player
+    if (row>=95){
+      stage=3;
+    }
+
 
  
 }
