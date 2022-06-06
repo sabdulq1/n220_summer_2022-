@@ -217,6 +217,8 @@ alien();
   textSize(25);
   text('Score : ' ,50,35);
   text(score,100,35)
+  text('Press s to shoot' ,300,35)
+  text('Arrows to move' ,300,65)
 
   //score board
   if(score>=27){
