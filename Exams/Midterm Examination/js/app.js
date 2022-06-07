@@ -18,9 +18,9 @@ let aWidth=40;
 let aHeight=40;
 let row =1;
 let currentRow= row;
-let rowDistance=2;
+let rowDistance=4;
 let aDistance=0;
-let aSpeed =3;
+let aSpeed =2;
 let aDirection=1;
 //row 1
 let a1X =50;
@@ -592,7 +592,7 @@ function alien(){
 
 
     //game over when aliens touch player
-    if (row>=95){
+    if (row>=40){
       stage=3;
     }
 
@@ -627,6 +627,7 @@ function keyTyped(){
   else{
     fire=false;
   }
+  prompt(KeyboardEvent)
 
 
 
