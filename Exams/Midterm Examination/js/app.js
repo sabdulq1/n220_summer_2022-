@@ -162,7 +162,7 @@ function menu(){
   textFont('Brush Script MT ');
   text('Space Invaders',width/2,100);
   textFont('Fantasy');
-  text('Click to play',width/2,300);
+  text('Click   to   play',width/2,300);
 
 
 
@@ -197,7 +197,7 @@ function lose(){
   fill("green");
   textSize(90);
   textFont('Brush Script MT ');
-  text('OPPS!',width/2,100);
+  text('OOPS!',width/2,100);
   textFont('Fantasy');
   text('You Lose',width/2,250);
   textSize(40);
