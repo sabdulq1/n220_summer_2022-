@@ -18,7 +18,7 @@ let aWidth=40;
 let aHeight=40;
 let row =1;
 let currentRow= row;
-let rowDistance=4;
+let rowDistance=4.3;
 let aDistance=0;
 let aSpeed =2;
 let aDirection=1;
@@ -592,7 +592,7 @@ function alien(){
 
 
     //game over when aliens touch player
-    if (row>=40){
+    if (row>=45){
       stage=3;
     }
 
