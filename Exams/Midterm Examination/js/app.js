@@ -627,7 +627,7 @@ function keyTyped(){
   else{
     fire=false;
   }
-  prompt(KeyboardEvent)
+  prompt();
 
 
 
