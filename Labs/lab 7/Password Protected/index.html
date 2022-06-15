@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<style>
+body{
+    text-align: center;
+    background-color: rgb(102, 84, 138);
+}
+nav {
+	float:center;
+	width:100%;
+	background: black;
+	overflow:fixed;
+	font-family:Arial;
+	color: white;
+	text-align:center;
+	margin:0 auto;
+  position:sticky;
+  top:0;
+}
+li {
+	padding:30;
+	list-style: none;
+    display: inline-block;
+}
+a{
+    padding:30px;
+    display: block;
+
+}
+img{
+    width: 60px;
+    height: 60px;
+}
+#dvOutput{
+    display: block;
+    display: none;
+    color: aqua;
+}
+#dvOutput1{
+    display: block;
+    display: none;
+    color: rgb(240, 10, 10);
+}
+.fa-check{
+    color: rgb(239, 229, 229);
+    background-color: rgb(74, 201, 144);
+    border-radius: 50%;
+}
+.fa-close{
+    color: rgb(250, 12, 12);
+    background-color: rgb(11, 11, 11);
+    border-radius: 50%;
+}
+.r{
+    width: 460px;
+    height: 460px;
+    display: block;
+    text-align: center;
+    background-color: black;
+    color: tomato;
+    margin: 0 auto;
+}
+#textName{
+    border-right:0.5em solid ;
+    padding: 2em;
+    font-family: monospace;
+}
+.b{
+    background-color:red;
+    border: 2px solid black;
+    padding:1pem 2pem;
+    border-radius: 3rem;
+    transition:0.3s;
+}
+.b:hover{
+    background-color :green;
+	border: 2px solid black;
+    border-radius :3rem;
+}
+
+</style>
+<body>
+<nav>
+    <h1>Lab 7</h1>
+    <h2>Greeter</h2>
+    <ul>
+        <li><a href="../Greeter/index.html">Lab 7 Greeter</a></li>
+        <li><a href="../Tip calculator/index.html">Lab 7 Tip calculator</a></li>
+        <li><a href="../Password Protected/index.html">Lab 7 Password Protected</a></li>
+    </ul>
+
+
+</nav>
+<h1>Program output </h1>
+<div class="r">
+<h1>Sign Up</h1>
+<label>USERNAME :</label>
+<input type="username" id="txtName"></input>
+<br/><br/>
+<label>Password :</label>
+<input type="password" id="txtName1"></input>
+<br/><br/>
+<label>Conform Password :</label>
+<input type="password" id="txtName2"></input>
+<br/><br/>
+<button class="b" onclick="password()">Sign up</button>
+<br/><br/>
+<div id="dvOutput0"></div>
+<div id="dvOutput"><h1>You have succesfully<i class="fa fa-check"></i> Signed up </h1></div>
+<div id="dvOutput1"><h1>The password did not matched <i class="fa fa-close"></i> <br/>please try again </h1></div>
+
+</div>
+<script class="a" 
+    src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+        <script src="js/app.js"></script>
+    </div>
+</body>
+</html>
