@@ -1,0 +1,194 @@
+<!-- so the idea is to make a program that ask user to input a number. when the user press button it checks the number is divisibleby 7 
+if yes it displays a message with a green background its divisible
+if not it displays a message with a red background its not divisible
+and when the user press retry button is goes back its orignal display  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<style>
+body{
+    text-align: center;
+    background-color: rgb(102, 84, 138);
+}
+nav {
+	float:center;
+	width:100%;
+	background: black;
+	overflow:fixed;
+	font-family:Arial;
+	color: white;
+	text-align:center;
+	margin:0 auto;
+}
+li {
+	padding:30;
+	list-style: none;
+    display: inline-block;
+}
+a{
+    padding:30px;
+    display: block;
+
+}
+img{
+    width: 60px;
+    height: 60px;
+}
+/* all above is only to display a nice website */
+
+/* Bassic plus setting display none so that i can display only if number is divisible by 7   */
+#dvOutput{
+    display: none;
+    color: rgb(11, 11, 11);
+    margin: 0 auto;
+}
+/* Bassic plus setting display none so that i can display only if number is not divisible by 7   */
+#dvOutput1{
+    display: none;
+    color: rgb(240, 10, 10);
+}
+/* Bassic plus setting display none so that i can display only if number is  divisible by 7   */
+.fa-check{
+    color: rgb(239, 229, 229);
+    background-color: rgb(74, 201, 144);
+    border-radius: 50%;
+    display: none;
+}
+/* Bassic plus setting display none so that i can display only if number is not divisible by 7   */
+.fa-close{
+    color: rgb(202, 250, 12);
+    background-color: rgb(29, 13, 172);
+    border-radius: 50%;
+    display: none;
+}
+/* Bassic css  */
+.main{
+    width: 760px;
+    height: 700px;
+    display: block;
+    text-align: center;
+    background-color: black;
+    color: rgb(224, 239, 17);
+    margin: 0 auto;
+}
+/* Bassic css  */
+/* #textName{
+    border-right:0.5em solid ;
+    padding: 2em;
+    font-family: monospace;
+    outline: none;
+    border: none;
+}*/
+textarea{
+    height:50px;
+    width: 300px;
+ 
+} 
+
+/* Bassic css  */
+.b{
+    background-color:rgb(218, 245, 11);
+    border: 2px solid black;
+    padding:1pem 2pem;
+    border-radius: 3rem;
+    transition:0.3s;
+    width: 90px;
+    height: 90px;
+}
+/* when user hover the mouse over button it changes its color to blue  */
+.b:hover{
+    background-color :rgb(23, 0, 128);
+	border: 2px solid black;
+    border-radius :3rem;
+}
+
+</style>
+<body>
+<nav>
+    <h1>Lab 8</h1>
+    <h2>Password Protected</h2>
+    <ul>
+        <li><a href="../Greeter/index.html">Lab 8 Is Divisible By Seven</a></li>
+        <li><a href="../Tip calculator/index.html">Lab 7 Tip calculator</a></li>
+        <li><a href="../Password Protected/index.html">Lab 7 Password Protected</a></li>
+    </ul>
+
+
+</nav>
+<h1>Program output </h1>
+<!-- all above is only to display a nice website -->
+
+
+<!-- This is main div which containa whole program -->
+<div class="main" id="main">
+    <!-- header -->
+    <h1>Lets create a div</h1>
+    <h2>Please Enter required information</h2>
+    <!-- Label used do define the input box fore user -->
+    <label>width :</label>
+    <!-- input with id and class genraly I use class for css and id for javascript   -->
+    <!-- asking user to input width -->
+    <input type="number"  id="txtName0" placeholder="Enter number" required></input>
+    <br/><br/>
+    <label>height :</label>
+    <!-- asking user to input Height -->
+    <input type="number"  id="txtName1" placeholder="Enter number" required></input>
+    <br/><br/>
+    <label>border-radius :</label>
+    <!-- asking user to input Border-radius -->
+    <input type="number"  id="txtName2" placeholder="Enter number" required></input>
+    <br/><br/>
+    <label>background-color :</label>
+    <!-- asking user to chose Background-color -->
+    <input type="color"  id="txtName3" placeholder="Enter number" required></input>
+    <br/><br/>
+    <label>Text color :</label>
+    <!-- asking user to chose Text color  -->
+    <input type="color"  id="txtName4" placeholder="Enter number" required></input>
+    <br/><br/>
+    <label>Text :</label>
+    <!-- asking user to input Text -->
+    <textarea  id="txtName5" placeholder="Please enter the text you would like to keep in div" required></textarea>
+    <br/><br/>
+    <label> select where you would like to align text </label><br /><br />
+    <!-- asking user to select where the user would like to align text  -->
+    <select id="txtName6">
+        <option value="center">center</option>
+        <option value="right">right</option>
+        <option value="left">left</option>
+    </select >
+    <br/><br/>
+    <label> select the font family you would like to use</label><br /><br />
+    <!-- asking user to select the font family -->
+    <select id="txtName7">
+        <option value="URW Chancery L, cursive">URW Chancery L, cursive</option>
+        <option value="Brush Script MT, Brush Script Std, cursive">Brush Script MT, Brush Script Std, cursive</option>
+        <option value="Courier New, monospace">Courier New, monospace</option>
+        <option value="Gill Sans, sans-serif">Gill Sans, sans-serif</option>
+        <option value="Arial Narrow, sans-serif">Arial Narrow, sans-serif</option>
+        <option value="Snell Roundhand, cursive">Snell Roundhand, cursive</option>
+    </select >
+    <br/><br/>
+
+    <!-- The check button takes the input and create and display a div -->
+    <button class="b" onclick="Create()">Create</button>
+    <!-- The Retry button will go back to its orginal display of the program -->
+    <button class="b" onclick="Retry()">Re try</button>
+    </div>
+    <br/><br/>
+    <!-- The dvOutput will only display Create bburron is pressed --> 
+    <div id="dvOutput"><h1>Div created</h1></div>
+
+
+<script class="a" 
+    src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+        <script src="js/app.js"></script>
+    </div>
+</body>
+</html>
