@@ -1,4 +1,4 @@
-function myFunction(clicked) {
+function Answer(clicked) {
     let a = "A mean-o-acid";
     b="<br/><br/>"
     c="Ok! I know it was a bad one"
