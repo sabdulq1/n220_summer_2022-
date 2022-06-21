@@ -1,0 +1,178 @@
+<!-- so the idea is to make a program that ask user to input a number. when the user press button it checks the number is divisibleby 7 
+if yes it displays a message with a green background its divisible
+if not it displays a message with a red background its not divisible
+and when the user press retry button is goes back its orignal display  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<style>
+body{
+    text-align: center;
+    background-color: rgb(102, 84, 138);
+}
+nav {
+	float:center;
+	width:100%;
+	background: black;
+	overflow:fixed;
+	font-family:Arial;
+	color: white;
+	text-align:center;
+	margin:0 auto;
+  position:sticky;
+  top:0;
+}
+li {
+	padding:30;
+	list-style: none;
+    display: inline-block;
+}
+a{
+    padding:30px;
+    display: block;
+
+}
+img{
+    width: 60px;
+    height: 60px;
+}
+/* all above is only to display a nice website */
+
+/* Bassic plus setting display none so that i can display only if number is divisible by 7   */
+#dvOutput{
+    display: none;
+    color: aqua;
+    margin: 0 auto;
+}
+/* Bassic plus setting display none so that i can display only if number is not divisible by 7   */
+#dvOutput1{
+    display: none;
+    color: rgb(108, 219, 39);
+    margin: 0 auto;
+}
+#dvOutput2{
+    display: none;
+    color: aqua;
+    margin: 0 auto;
+}
+/* Bassic plus setting display none so that i can display only if number is not divisible by 7   */
+#dvOutput3{
+    display: none;
+    color: rgb(64, 231, 22);
+    margin: 0 auto;
+}
+#dvOutput4{
+    display: none;
+    color: aqua;
+    margin: 0 auto;
+}
+/* Bassic plus setting display none so that i can display only if number is not divisible by 7   */
+#dvOutput5{
+    display: none;
+    color: rgb(25, 231, 49);
+    margin: 0 auto;
+}
+/* Bassic plus setting display none so that i can display only if number is  divisible by 7   */
+.fa-check{
+    color: rgb(239, 229, 229);
+    background-color: rgb(74, 201, 144);
+    border-radius: 50%;
+    display: none;
+}
+/* Bassic plus setting display none so that i can display only if number is not divisible by 7   */
+.fa-close{
+    color: rgb(202, 250, 12);
+    background-color: rgb(29, 13, 172);
+    border-radius: 50%;
+    display: none;
+}
+/* Bassic css  */
+.main{
+    width: 100%;
+    height: 160px;
+    display: block;
+    text-align: center;
+    background-color: black;
+    color: rgb(224, 239, 17);
+    margin: 0 auto;
+}
+/* Bassic css  */
+#textName{
+    border-right:0.5em solid ;
+    padding: 2em;
+    font-family: monospace;
+    outline: none;
+    border: none;
+}
+input, textarea{
+    border: none;
+    background-color: aqua;
+    outline: none;
+    color: blue;
+    font-size: 14px;
+    border-radius: 90%;
+    height:100px;
+    width: 100px;
+ 
+}
+
+/* Bassic css  */
+.b{
+    background-color:rgb(218, 245, 11);
+    border: 2px solid black;
+    padding:1pem 2pem;
+    border-radius: 3rem;
+    transition:0.3s;
+}
+/* when user hover the mouse over button it changes its color to blue  */
+.b:hover{
+    background-color :rgb(23, 0, 128);
+	border: 2px solid black;
+    border-radius :3rem;
+}
+#z{
+    color: blue;
+    display: inline;
+}
+
+</style>
+<body>
+<nav>
+    <h1>Final</h1>
+    <h2>result</h2>
+
+</nav>
+<h1>Program output </h1>
+
+<div class="main" id="main">
+The version you chosed is: <h1 id="result"></h1>
+<div >
+    <h1 claas="z" id="z" onclick="Create()">biuiu </h1><h1 claas="z" id="z" onclick="Create1()">biuiu </h1><h1 claas="z" id="z"onclick="Create2()">biuiu </h1><h1 claas="z" id="z" onclick="Create3()">biuiu </h1>
+</div>
+    </div>
+    <div class="dvOutput" id="dvOutput"><h1>DIV 0</h1>
+        <label>Number :</label>
+        <!-- input with id and class genraly i use class for css and id for javascript   -->
+        <input type="number"  id="txtName1" placeholder="Enter number" required></input>
+        <br/><br/>
+        <!-- The check button takes the input and checks and display weather the input is divisible by 7 or not -->
+        <button class="b" onclick="check()">check</button>
+        <!-- The Retry button will go back to its orginal display of the program -->
+        <button class="b" onclick="Retry()">Re try</button>
+        <div id="dvOutput4"><h1><i id="i" class="fa fa-check"></i> The number is divisible by 7 </h1></div>
+        <div id="dvOutput5"><h1> <i id="i1" class="fa fa-close"></i> <br/>The number is not divisible by 7 </h1></div>
+
+    </div>
+    <div class="dvOutput1" id="dvOutput1"><h1>DIV 1</h1></div>
+    <div class="dvOutput2" id="dvOutput2"><h1>DIV 2</h1></div>
+    <div class="dvOutput3" id="dvOutput3"><h1>DIV 3</h1></div>
+    <script src="js/result.js"></script>
+    
+</body>
+</html>

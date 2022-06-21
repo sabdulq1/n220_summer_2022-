@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    text-align:center;
+    background-color: rgb(102, 84, 138);
+}
+nav {
+	float:center;
+	width:100%;
+	background: black;
+	overflow:fixed;
+	font-family:Arial;
+	color: white;
+	text-align:center;
+	margin:0 auto;
+  position:sticky;
+  top:0;
+}
+li {
+	padding:30;
+	list-style: none;
+    display: inline-block;
+}
+a{
+    padding:30px;
+    display: block;
+
+}
+img{
+    width: 60px;
+    height: 60px;
+}
+.dvOutput{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    background-color:grey;
+    margin: 5px;
+}
+
+</style>
+<body>
+<nav>
+    <h1>Lab 9</h1>
+    <h2>Color changer</h2>
+    <ul>
+        <li><a href="">Lab 9 Color changer</a></li>
+        <li><a href="../Flash Cards/index.html">Lab 9 Flash Cards</a></li>
+        <li><a href="../Color Mixer/index.html">Lab 9 Color Mixer</a></li>
+    </ul>
+
+</nav>
+<h1>Program output </h1>
+<div class="dvOutput" id="dvOutput"  onclick="change(this.id)"data-color="red"></div>
+<div class="dvOutput" id="dvOutput1"  onclick="change(this.id)"data-color="green"></div>
+<div class="dvOutput" id="dvOutput2"  onclick="change(this.id)"data-color="blue"></div>
+  <script src="js/app.js"></script>
+    </div>
+</body>
+</html>

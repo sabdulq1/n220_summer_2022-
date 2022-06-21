@@ -1,0 +1,160 @@
+<!-- so the idea is to make a program that ask user to input a number. when the user press button it checks the number is divisibleby 7 
+if yes it displays a message with a green background its divisible
+if not it displays a message with a red background its not divisible
+and when the user press retry button is goes back its orignal display  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<style>
+body{
+    text-align: center;
+    background-color: rgb(102, 84, 138);
+}
+nav {
+	float:center;
+	width:100%;
+	background: black;
+	overflow:fixed;
+	font-family:Arial;
+	color: white;
+	text-align:center;
+	margin:0 auto;
+  position:sticky;
+  top:0;
+}
+li {
+	padding:30;
+	list-style: none;
+    display: inline-block;
+}
+a{
+    padding:30px;
+    display: block;
+
+}
+img{
+    width: 60px;
+    height: 60px;
+}
+/* all above is only to display a nice website */
+
+/* Bassic plus setting display none so that i can display only if number is divisible by 7   */
+#dvOutput{
+    display: none;
+    color: aqua;
+}
+/* Bassic plus setting display none so that i can display only if number is not divisible by 7   */
+#dvOutput1{
+    display: none;
+    color: rgb(240, 10, 10);
+}
+/* Bassic plus setting display none so that i can display only if number is  divisible by 7   */
+.fa-check{
+    color: rgb(239, 229, 229);
+    background-color: rgb(74, 201, 144);
+    border-radius: 50%;
+    display: none;
+}
+/* Bassic plus setting display none so that i can display only if number is not divisible by 7   */
+.fa-close{
+    color: rgb(202, 250, 12);
+    background-color: rgb(29, 13, 172);
+    border-radius: 50%;
+    display: none;
+}
+/* Bassic css  */
+.main{
+    width: 460px;
+    height: 460px;
+    display: block;
+    text-align: center;
+    background-color: black;
+    color: rgb(224, 239, 17);
+    margin: 0 auto;
+}
+/* Bassic css  */
+#textName{
+    border-right:0.5em solid ;
+    padding: 2em;
+    font-family: monospace;
+    outline: none;
+    border: none;
+}
+input, textarea{
+    border: none;
+    background-color: aqua;
+    outline: none;
+    color: blue;
+    font-size: 14px;
+    border-radius: 90%;
+    height:100px;
+    width: 100px;
+ 
+}
+
+/* Bassic css  */
+.b{
+    background-color:rgb(218, 245, 11);
+    border: 2px solid black;
+    padding:1pem 2pem;
+    border-radius: 3rem;
+    transition:0.3s;
+}
+/* when user hover the mouse over button it changes its color to blue  */
+.b:hover{
+    background-color :rgb(23, 0, 128);
+	border: 2px solid black;
+    border-radius :3rem;
+}
+
+</style>
+<body>
+<nav>
+    <h1>Final</h1>
+    <h2>Input transfer</h2>
+
+
+</nav>
+<h1>Program output </h1>
+
+
+<div class="main" id="main">
+<!-- <form action="result.html" method="get">
+<label>Name :</label>
+<input type="text"  id="txtName1" placeholder="Enter name" required></input>
+<br/><br/>
+<button class="b" onclick="transfer()">transfer</button>
+</form> -->
+<!-- <form action="result.html" method="get" target="blank" id="myform"  >
+    <select id="id">
+    <option value="Basic">Basic</option>
+    <option value="High-end-coupe">High-end-coupe</option>
+    <option value="Platinum coupe">Platinum coupe</option>
+    <option value="Platinum coupeV12">Platinum coupeV12</option>
+    </select> -->
+      <!-- <button  class="button" type="submit" value="Submit">Chose</button>
+    </form> -->
+    <form id="form">
+        <label for="firstname">First name</label>
+        <input id="firstname" type="text" required>
+        <label for="password">First name</label>
+        <input id="password" type="password" required>
+        <label for="conformPassword">Conform password</label>
+        <input id="conformPassword" type="password" required>
+
+
+        <button type="submit" onclick="password()">next page</button>
+
+    </form>
+    <div class="dvOutput" id="dvOutput">CGHFCJ VLCOLVG</div>
+</div>
+<script src="js/app.js"></script>
+
+</body>
+</html>
