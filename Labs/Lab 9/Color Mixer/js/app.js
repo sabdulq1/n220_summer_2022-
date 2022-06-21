@@ -1,55 +1,55 @@
 let red = 0, green = 0, blue = 0;
        document.getElementById("rgb").innerHTML = `${red},${green},${blue}`;
 
-function red_1(){
+function redOne(){
     red += 1;
     document.getElementById("dvOutput").style.backgroundColor = "rgb("+red+","+green+","+blue+")";
     document.getElementById("rgb").innerHTML = `${red},${green},${blue}`;
 }
 
-function red_5(){
+function redFive(){
     red += 5;
     document.getElementById("dvOutput").style.backgroundColor = "rgb("+red+","+green+","+blue+")";
     document.getElementById("rgb").innerHTML = `${red},${green},${blue}`;
 }
-function red_10(){
+function redTen(){
     red += 10;
     document.getElementById("dvOutput").style.backgroundColor = "rgb("+red+","+green+","+blue+")";
     document.getElementById("rgb").innerHTML = `${red},${green},${blue}`;
 }
        
-function green_1(){
+function greenOne(){
     green +=1;
     document.getElementById("dvOutput").style.backgroundColor = "rgb("+red+","+green+","+blue+")";
     document.getElementById("rgb").innerHTML = `${red},${green},${blue}`;
 }
 
-function green_5(){
+function greenFive(){
     green +=5;
     document.getElementById("dvOutput").style.backgroundColor = "rgb("+red+","+green+","+blue+")";
     document.getElementById("rgb").innerHTML = `${red},${green},${blue}`;
 }
 
-function green_10(){
+function greenTen(){
     green +=10;
     document.getElementById("dvOutput").style.backgroundColor = "rgb("+red+","+green+","+blue+")";
     document.getElementById("rgb").innerHTML = `${red},${green},${blue}`;
 }
       
-function blue_1(){
+function blueOne(){
     blue +=1;
     document.getElementById("dvOutput").style.backgroundColor = "rgb("+red+","+green+","+blue+")";
     document.getElementById("rgb").innerHTML = `${red},${green},${blue}`;
 }
     
-function blue_5(){
+function blueFive(){
     blue +=5;
     document.getElementById("dvOutput").style.backgroundColor = "rgb("+red+","+green+","+blue+")";
     document.getElementById("rgb").innerHTML = `${red},${green},${blue}`;
        
 }
        
-function blue_10(){
+function blueTen(){
     blue +=10;
     document.getElementById("dvOutput").style.backgroundColor = "rgb("+red+","+green+","+blue+")";
     document.getElementById("rgb").innerHTML = `${red},${green},${blue}`;
