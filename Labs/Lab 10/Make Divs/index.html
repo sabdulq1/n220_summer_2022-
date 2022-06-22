@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 <style>
 body{
-    text-align:center;
+    text-align: center;
     background-color: rgb(102, 84, 138);
 }
 nav {
@@ -20,8 +21,6 @@ nav {
 	color: white;
 	text-align:center;
 	margin:0 auto;
-  position:sticky;
-  top:0;
 }
 li {
 	padding:30;
@@ -37,31 +36,138 @@ img{
     width: 60px;
     height: 60px;
 }
-.dvOutput{
-    width: 200px;
-    height: 200px;
-    display: inline-block;
-    background-color:grey;
-    margin: 5px;
+#dvOutput{
+    display: block;
+    color: rgb(56, 226, 14);
+    margin: 0 auto;
+}
+/* Bassic plus setting display none so that i can display only if number is not divisible by 7   */
+#dvOutput1{
+    display: none;
+    color: rgb(240, 10, 10);
+}
+/* Bassic plus setting display none so that i can display only if number is  divisible by 7   */
+.fa-check{
+    color: rgb(239, 229, 229);
+    background-color: rgb(74, 201, 144);
+    border-radius: 50%;
+    display: none;
+}
+/* Bassic plus setting display none so that i can display only if number is not divisible by 7   */
+.fa-close{
+    color: rgb(202, 250, 12);
+    background-color: rgb(29, 13, 172);
+    border-radius: 50%;
+    display: none;
+}
+/* Bassic css  */
+.main{
+    width: 360px;
+    height: 100px;
+    display: block;
+    text-align: center;
+    background-color: black;
+    color: rgb(224, 239, 17);
+    margin: 0 auto;
+}
+/* Bassic css  */
+/* #textName{
+    border-right:0.5em solid ;
+    padding: 2em;
+    font-family: monospace;
+    outline: none;
+    border: none;
+}*/
+textarea{
+    height:50px;
+    width: 300px;
+ 
+} 
+
+/* Bassic css  */
+.b{
+    background-color:rgb(218, 245, 11);
+    border: 2px solid black;
+    padding:1pem 2pem;
+    border-radius: 3rem;
+    transition:0.3s;
+    width: 90px;
+    height: 90px;
+}
+/* when user hover the mouse over button it changes its color to blue  */
+.b:hover{
+    background-color :rgb(23, 0, 128);
+	border: 2px solid black;
+    border-radius :3rem;
 }
 
 </style>
 <body>
 <nav>
-    <h1>Lab 9</h1>
-    <h2>Color changer</h2>
+    <h1>Lab 10</h1>
+    <h2>Make Divs</h2>
     <ul>
-        <li><a href="">Lab 9 Color changer</a></li>
-        <li><a href="../Flash Cards/index.html">Lab 9 Flash Cards</a></li>
-        <li><a href="../Color Mixer/index.html">Lab 9 Color Mixer</a></li>
+        <li><a href="../Its just average/index.html">Lab 10 Its just average</a></li>
+        <li><a href="../Bad word catcher with loops/index.html">Lab 10 Bad word catcher with loops</a></li>
+        <li><a href="">Lab 10 Make Divs</a></li>
     </ul>
+
+
 
 </nav>
 <h1>Program output </h1>
-<div class="dvOutput" id="dvOutput"  onclick="change(this.id)"data-color="red"></div>
-<div class="dvOutput" id="dvOutput1"  onclick="change(this.id)"data-color="green"></div>
-<div class="dvOutput" id="dvOutput2"  onclick="change(this.id)"data-color="blue"></div>
-  <script src="js/app.js"></script>
+<div class="main" id="main">
+<h1>Lets create loop of divs</h1>
+
+<button onclick="displayDivs()">Make Divs</button>
+
+<script class="a" 
+    src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+        <script src="js/app.js"></script>
     </div>
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<script src="js/app.js">
+
+</script>
+
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+
+<script>
+function createDiv(obj) {
+  var div = document.createElement("div");    
+  div.innerText = "This is a div.";
+  div.style.width = obj.width;
+  div.style.height = obj.height;
+  div.style.background=obj.color;
+  document.body.appendChild(div);
+
+}
+
+function myFunction(){
+let objects = [
+    { color: "#FF0000", height: 100, width: 300 },
+    { color: "#FFFF00", height: 200, width: 200 },
+    { color: "#ff0000", height: 300, width: 100 },
+];
+
+for(i=0;i<objects.length;i++)
+        createDiv(objects[i]);
+
+}
+
+</script>
+
+</body>
+</html> -->
