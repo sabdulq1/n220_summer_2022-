@@ -14,13 +14,13 @@ and when the user press retry button is goes back its orignal display  -->
 <style>
 body{
     text-align: center;
-    background-color: rgb(102, 84, 138);
+    background-color: rgb(232, 232, 234);
 }
 nav {
 	float:center;
 	width:100%;
 	background: black;
-	overflow:fixed;
+	overflow:auto;
 	font-family:Arial;
 	color: white;
 	text-align:center;
@@ -46,8 +46,10 @@ img{
 
 /* Bassic plus setting display none so that i can display only if number is divisible by 7   */
 #dvOutput{
-    display: none;
-    color: aqua;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: aqua;
 }
 /* Bassic plus setting display none so that i can display only if number is not divisible by 7   */
 #dvOutput1{
@@ -72,12 +74,13 @@ img{
 .main{
     width: 460px;
     height: 460px;
-    display: block;
+    display: none;
     text-align: center;
     background-color: black;
     color: rgb(224, 239, 17);
     margin: 0 auto;
 }
+
 /* Bassic css  */
 #textName{
     border-right:0.5em solid ;
@@ -86,17 +89,7 @@ img{
     outline: none;
     border: none;
 }
-input, textarea{
-    border: none;
-    background-color: aqua;
-    outline: none;
-    color: blue;
-    font-size: 14px;
-    border-radius: 90%;
-    height:100px;
-    width: 100px;
- 
-}
+
 
 /* Bassic css  */
 .b{
@@ -112,48 +105,83 @@ input, textarea{
 	border: 2px solid black;
     border-radius :3rem;
 }
+.h{
+    color: blue;
+}
+.a{float:left;
+    padding:10px;
+}
+.a img{
+  width: 100px;
+  height:80px;
+}
+img{
+    width:1500px;
+    height: 250px;
+}
+.index-1{
+    z-index: -1;
+}
+.index1{
+
+    margin-top:-200px;
+    z-index: 1;
+    text-align: center;
+}
+.content{
+    text-align: center;
+}
 
 </style>
 <body>
 <nav>
-    <h1>Final</h1>
-    <h2>Input transfer</h2>
+    <div class="a">
+        <img  src="assets/logo.jpg" alt="logo"></img>
+      </div>
+    <h1> Ultimate calculator</h1>
+
 
 
 </nav>
-<h1>Program output </h1>
 
+<div class="content">
+    <div class="index-1">
+        <img src="assets/background1.jpg" alt="background1">
+    </div>
+    <div class="index1" >
 
+        <h1>Let's learn together.</h1>
+        <h2>We're on a mission to help everyone solve math fast and easily.</h2>
+
+    </div>
+
+</div>
+<br/><br/><br/><br/><br/><br/>
+<!-- making p as link so that when the user clicks Create account a new Create account div will pop up  -->
+<h1>Lets start by creaing your account</h1>
+<h1 onclick="p()"><u class="h">Create account</u></h1>
+
+<!-- Create account div  -->
 <div class="main" id="main">
-<!-- <form action="result.html" method="get">
-<label>Name :</label>
-<input type="text"  id="txtName1" placeholder="Enter name" required></input>
-<br/><br/>
-<button class="b" onclick="transfer()">transfer</button>
-</form> -->
-<!-- <form action="result.html" method="get" target="blank" id="myform"  >
-    <select id="id">
-    <option value="Basic">Basic</option>
-    <option value="High-end-coupe">High-end-coupe</option>
-    <option value="Platinum coupe">Platinum coupe</option>
-    <option value="Platinum coupeV12">Platinum coupeV12</option>
-    </select> -->
-      <!-- <button  class="button" type="submit" value="Submit">Chose</button>
-    </form> -->
+
     <form id="form">
-        <label for="firstname">First name</label>
-        <input id="firstname" type="text" required>
-        <label for="password">First name</label>
-        <input id="password" type="password" required>
-        <label for="conformPassword">Conform password</label>
-        <input id="conformPassword" type="password" required>
+        <h1>Create account</h1>
+        <label for="fullname">First name</label>
+        <input id="fullname" type="text" required placeholder="Enter Full Name"><br/><br/>
+        <label for="USERNAME">User name</label>
+        <input id="USERNAME" type="text" required placeholder="Enter User name"><br/><br/>
 
-
+        <label for="password">Password</label>
+        <input id="password" type="password" required placeholder="Enter Password"><br/><br/>
+<!-- when user clicks button it tranfer user to next page and also take name 
+        of user inorder to display on next page -->
         <button type="submit" onclick="password()">next page</button>
 
     </form>
-    <div class="dvOutput" id="dvOutput">CGHFCJ VLCOLVG</div>
 </div>
+
+
+
 <script src="js/app.js"></script>
 
 </body>

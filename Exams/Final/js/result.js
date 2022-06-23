@@ -1,217 +1,112 @@
-const firstname=localStorage.getItem('first-name');
+// bringing name of user from localStorage and display
+const fullname=localStorage.getItem('full-name');
 
-document.getElementById('result').textContent="hello  " +firstname;
-
-function Create() {
-    // setting variables for each inputs
-    let a= "250px"
-    let b= "250px";
-    let d= "red";
-    // let e= txtName4.value;
-    // let f= txtName5.value;
-    // let g= txtName6.value;
-    // let h= txtName7.value;
-    // bringing divs by id
-
-    var dvOutput = document.getElementById("dvOutput")
-    var dvOutput1 = document.getElementById("dvOutput1")
-    var dvOutput2 = document.getElementById("dvOutput2")
-    var dvOutput3 = document.getElementById("dvOutput3")
-    // setting width
-    dvOutput.style.width=a;
-    // setting height
-    dvOutput.style.height=b;
-    // setting borderRadius
-    // setting backgroundColor
-    dvOutput.style.backgroundColor=d;
-    // // setting text color
-    // dvOutput.style.color=e;
-    // // setting text
-    // dvOutput.innerHTML=f;
-    // // setting textAlign
-    // dvOutput.style.textAlign=g;
-    // // setting fontFamily
-    // dvOutput.style.fontFamily=h;
-    // // displaying div
+document.getElementById('result').textContent="Hello  " +fullname;
+//  making both p as link so that when the user calculator names calculator div appears  
+function p(){
+    let dvOutput= document.getElementById("dvOutput");
+    let dvOutput2= document.getElementById("dvOutput2");
     dvOutput.style.display="block";
-    dvOutput1.style.display="none";
     dvOutput2.style.display="none";
-    dvOutput3.style.display="none";
-    // scrolling to the div    
 }
-function Create1() {
-    // setting variables for each inputs
-    let a= "250px"
-    let b= "250px";
-    let d= "red";
-    // let e= txtName4.value;
-    // let f= txtName5.value;
-    // let g= txtName6.value;
-    // let h= txtName7.value;
-    // bringing divs by id
-
-    var dvOutput = document.getElementById("dvOutput")
-    var dvOutput1 = document.getElementById("dvOutput1")
-    var dvOutput2 = document.getElementById("dvOutput2")
-    var dvOutput3 = document.getElementById("dvOutput3")
-    // setting width
-    dvOutput1.style.width=a;
-    // setting height
-    dvOutput1.style.height=b;
-    // setting borderRadius
-    // setting backgroundColor
-    dvOutput1.style.backgroundColor=d;
-    // // setting text color
-    // dvOutput.style.color=e;
-    // // setting text
-    // dvOutput.innerHTML=f;
-    // // setting textAlign
-    // dvOutput.style.textAlign=g;
-    // // setting fontFamily
-    // dvOutput.style.fontFamily=h;
-    // // displaying div
+function p1(){
+    let dvOutput= document.getElementById("dvOutput");
+    let dvOutput2= document.getElementById("dvOutput2");
     dvOutput.style.display="none";
-    dvOutput1.style.display="block";
-    dvOutput2.style.display="none";
-    dvOutput3.style.display="none";
-    // scrolling to the div    
-}
-function Create2() {
-    // setting variables for each inputs
-    let a= "250px"
-    let b= "250px";
-    let d= "red";
-    // let e= txtName4.value;
-    // let f= txtName5.value;
-    // let g= txtName6.value;
-    // let h= txtName7.value;
-    // bringing divs by id
-
-    var dvOutput = document.getElementById("dvOutput")
-    var dvOutput1 = document.getElementById("dvOutput1")
-    var dvOutput2 = document.getElementById("dvOutput2")
-    var dvOutput3 = document.getElementById("dvOutput3")
-    // setting width
-    dvOutput2.style.width=a;
-    // setting height
-    dvOutput2.style.height=b;
-    // setting borderRadius
-    // setting backgroundColor
-    dvOutput2.style.backgroundColor=d;
-    // // setting text color
-    // dvOutput.style.color=e;
-    // // setting text
-    // dvOutput.innerHTML=f;
-    // // setting textAlign
-    // dvOutput.style.textAlign=g;
-    // // setting fontFamily
-    // dvOutput.style.fontFamily=h;
-    // // displaying div
-    dvOutput.style.display="none";
-    dvOutput1.style.display="none";
     dvOutput2.style.display="block";
-    dvOutput3.style.display="none";
-    // scrolling to the div    
 }
-function Create3() {
-    // setting variables for each inputs
-    let a= "250px"
-    let b= "250px";
-    let d= "red";
-    // let e= txtName4.value;
-    // let f= txtName5.value;
-    // let g= txtName6.value;
-    // let h= txtName7.value;
-    // bringing divs by id
 
-    var dvOutput = document.getElementById("dvOutput")
-    var dvOutput1 = document.getElementById("dvOutput1")
-    var dvOutput2 = document.getElementById("dvOutput2")
-    var dvOutput3 = document.getElementById("dvOutput3")
-    // setting width
-    dvOutput3.style.width=a;
-    // setting height
-    dvOutput3.style.height=b;
-    // setting borderRadius
-    // setting backgroundColor
-    dvOutput3.style.backgroundColor=d;
-    // // setting text color
-    // dvOutput.style.color=e;
-    // // setting text
-    // dvOutput.innerHTML=f;
-    // // setting textAlign
-    // dvOutput.style.textAlign=g;
-    // // setting fontFamily
-    // dvOutput.style.fontFamily=h;
-    // // displaying div
-    dvOutput.style.display="none";
-    dvOutput1.style.display="none";
-    dvOutput2.style.display="none";
-    dvOutput3.style.display="block";
-    // scrolling to the div    
+//Mean calculator onclick 
+//bringing input
+var txtName1 = document.getElementById("txtName1")
+function calculate() {
+    //assigning varables
+        var a = txtName1.value;
+        let b = a.split(",");
+        let mean =0;
+        //performing calculation
+        for (let i=0; i<b.length;i++){
+            mean += Number(b[i]/b.length);
+        }
+        //displaying mean and styling div
+        let dvOutput1=document.getElementById("dvOutput1");
+        dvOutput1.innerHTML="Mean of list of numbers you inpted is : "+mean;
+        let Menhead=document.getElementById("Menhead");
+        Menhead.style.backgroundColor="red";
+        Menhead.innerHTML=" Mean Result"
+}function retry(){
+    //returning following variables to orignal position
+    let Menhead=document.getElementById("Menhead");
+        Menhead.style.backgroundColor="green";
+        Menhead.innerHTML=" Mean Result";
+        txtName1.value=""
+        dvOutput1.innerHTML="";
 }
-//=====================================================//
-// bringing the number user inputed
-let txtName1 = document.querySelector("#txtName1");
-
-// Things to take place when the check button is clicked
-function check() {
+//Pythagorean theorem calculator onclick 
+//bringing inputs
+var txtName2 = document.getElementById("txtName2")
+var txtName3 = document.getElementById("txtName3")
+function calculate1() {
     // setting variables 
-    let a= txtName1.value;
-    let b= 0;
+    let a= txtName2.value;
+    let b= txtName3.value;
     // bringing divs by id
-    var dvOutput = document.getElementById("dvOutput");
-    var dvOutput4 = document.getElementById("dvOutput4");
-    var dvOutput5 = document.getElementById("dvOutput5");
-    // i and i1 are ids for icons
-    var i = document.getElementById("i");
-    var i1 = document.getElementById("i1");
-    // condition to check if number is divisvle by 7
-    if(a % 7 ==b){
-        // displaying the number is divisible by 7
-        dvOutput4.style.display="block";
-        // making sue it does not display another div
-        dvOutput5.style.display="none";
-        // displaying icon
-        i.style.display="inline";
-        // changing main and div background color and text color
-        dvOutput.style.backgroundColor="green";
-        dvOutput.style.color="black"; 
-        dvOutput4.style.color="black";
-
-    }
-    else{
-        // displaying the number is not divisible by 7
-        dvOutput5.style.display="block";
-        // making sue it does not display another div
-        dvOutput4.style.display="none";
-        // displaying icon
-        i1.style.display="inline";
-        // changing main and div background color and text color
-        dvOutput.style.backgroundColor="red";
-        dvOutput5.style.color="black";
-        dvOutput.style.color="black";
-    }
-}
-// Things to take place when the Retry button is clicked
-function Retry() {
-    // bringing divs and icons by id
-    var i = document.getElementById("i");
-    var i1 = document.getElementById("i1");
-    var dvOutput = document.getElementById("dvOutput");
-    var dvOutput4 = document.getElementById("dvOutput4");
-    var dvOutput5 = document.getElementById("dvOutput5");
-    dvOutput4.style.display="none";
-    dvOutput5.style.display="none";
-    // setting input area to none
-    txtName1.value="";
-    // setting placeholder for input
-    txtName1.placeholder="Enter number";
-    // changing main background color and text color back to orignal
-    dvOutput.style.backgroundColor="black";
-    dvOutput.style.color=" rgb(224, 239, 17)";
-    // making sue it does not display another div
-    i.style.display="none";
-    i1.style.display="none";
+    var dvOutput3 = document.getElementById("dvOutput3");
+            //performing calculation
+    c=Math.sqrt(Math.pow(a,2)+Math.pow(b,2));
+    console.log(c)
+    dvOutput3.innerHTML="Value of  C is:  "+  c
+        //displaying c value and styling div
+    let head=document.getElementById("head");
+        head.style.backgroundColor="red";
+        head.innerHTML=" Pythagorean theorem Result";
 
 }
+function retry1(){
+        //returning following variables to orignal position
+    let head=document.getElementById("head");
+    head.style.backgroundColor="green";
+    head.innerHTML="Pythagorean theorem calculator";
+    txtName2.value="";
+    txtName3.value=""
+    dvOutput3.innerHTML="";
+
+}
+
+// on moueover and on mouseout events for all buttons
+//mean div calculate button events
+let b= document.getElementById('b');
+b.onmouseover=function(){
+    this.style.backgroundColor="blue";
+}
+b.onmouseout=function(){
+    this.style.backgroundColor="yellow";
+}
+//mean div retry button events
+let b1= document.getElementById('b1');
+b1.onmouseover=function(){
+    this.style.backgroundColor="blue";
+}
+b1.onmouseout=function(){
+    this.style.backgroundColor="yellow";
+}
+//Pythagorean theorem calculate button events
+let b2= document.getElementById('b2');
+b2.onmouseover=function(){
+    this.style.backgroundColor="blue";
+}
+b2.onmouseout=function(){
+    this.style.backgroundColor="yellow";
+}
+//Pythagorean theorem retry button events
+let b3= document.getElementById('b3');
+b3.onmouseover=function(){
+    this.style.backgroundColor="blue";
+}
+b3.onmouseout=function(){
+    this.style.backgroundColor="yellow";
+}
+    
+
+
+
